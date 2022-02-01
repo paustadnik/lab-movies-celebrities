@@ -25,8 +25,17 @@ router.post('/create', async (req, res) => {
 
 router.get('/movies', async (req, res) => {
     const movies = await Movie.find()
-    console.log(movies)
+    //console.log(movies)
     res.render('movies/movies', { movies })
+})
+
+router.get('/movies/:id', async (req, res) => {
+    const id = req.params.id
+    const movie = await Movie.findById(id)
+    console.log(id)
+
+    res.render('movies/movie-details', { movie })
+
 })
 
 module.exports = router;
