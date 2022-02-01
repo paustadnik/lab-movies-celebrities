@@ -15,6 +15,7 @@ const hbs = require('hbs');
 
 const app = express();
 const Celebrity = require('./models/Celebrity.model')
+const Movie = require('./models/Movie.model')
 
 const celebritiesRouter = require('./routes/celebrities.routes')
 const moviesRouter = require('./routes/movies.routes')
@@ -37,7 +38,7 @@ app.use('/celebrities', celebritiesRouter)
 
 
 // movies routes
-app.use('/celebrities', moviesRouter)
+app.use('/movies', moviesRouter)
 
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
