@@ -16,7 +16,7 @@ router.post('/create', async (req, res) => {
 
     } catch (error) {
         console.log(error)
-        res.render('celebrities/new-celebrity')
+        res.render('celebrities/create')
     }
     console.log(celebrity)
 })
